@@ -1,10 +1,13 @@
 import React from 'react'
 import banner from '../assets/images/banner.jpg'
+import Header from './Header'
 import './Home.css'
 import Product from './Product'
 
 function Home() {
   return (
+    <>
+    <Header />
     <div className='home'>
       <img className='home__image' src={banner} alt="bannerImg" />
       <div className="home__row">
@@ -50,6 +53,7 @@ function Home() {
           image="https://m.media-amazon.com/images/I/71PP5CrY9GL._SL1500_.jpg" /> 
       </div>
     </div>
+  </>
   )
 }
 
