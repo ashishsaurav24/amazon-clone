@@ -5,8 +5,6 @@ import './Header.css'
 import { useStateValue } from '../StateProvider'
 
 
-  
-
 function Header() {
   const [{ basket }] = useStateValue();
   console.log(basket);
