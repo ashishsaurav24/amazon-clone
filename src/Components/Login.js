@@ -4,7 +4,7 @@ import './Login.css'
 import { auth } from '../firebase'
 
 function Login() {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +15,7 @@ function Login() {
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         // Logged in and redirect to home page
-        history.push('/');
+        navigate('/');
       })
       .catch((e) => alert(e.message));
   }
@@ -27,7 +27,7 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then(auth => {
         // Create a user, login and redirect to home page
-        history.push('/');
+        navigate('/');
       })
       .catch((e) => alert(e.message));
   }
