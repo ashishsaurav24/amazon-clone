@@ -32,8 +32,6 @@ function App() {
     }
   }, []);
 
-console.log("USR IS" >>> user);
-
   return (
     <BrowserRouter>
       <div className="app">
